@@ -4,6 +4,8 @@
 
 'use strict';
 import React from 'react';
+import ZHHeaderScrollView from './View/ZHHeaderScollView';
+import Dimensions from 'Dimensions';
 import {
     Component,
     AppRegistry,
@@ -22,10 +24,13 @@ export default class ZHHomePage extends Component {
     constructor(props) {
         super(props);
         var dataSource = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+        var dataSource2 = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+
         // 初始状态
         this.state = {
             listDataSource: dataSource.cloneWithRows(['row1', 'row2']),
-            isLoading: false,
+            listTopStoriesSource: [],
+            isLoading: true,
         };
 
     }
@@ -40,7 +45,7 @@ export default class ZHHomePage extends Component {
         fetch(query)
             .then(response => response.json())
             .then(json => {
-                this._handleResponse(json.stories);
+                this._handleResponse(json);
                 console.log(json);
             })
             .catch(error =>
@@ -52,16 +57,16 @@ export default class ZHHomePage extends Component {
 
     _handleResponse(response) {
         if (response) {
-
             this.setState({
-                listDataSource: this.state.listDataSource.cloneWithRows(response),
+                listDataSource: this.state.listDataSource.cloneWithRows(response.stories),
+                listTopStoriesSource: response.top_stories,
                 isLoading: false
-            })
-            ;
+            });
         }
+        console.log('11');
     }
 
-    renderRow(rowData, sectionID, rowID){
+    renderRow(rowData, sectionID, rowID) {
 
         return (
             <TouchableHighlight >
@@ -75,19 +80,34 @@ export default class ZHHomePage extends Component {
         )
     }
 
+    renderHeader() {
+        return (
+            <ZHHeaderScrollView
+                width={300}
+                height={200}
+                imageDataSource={this.state.listTopStoriesSource}>
+            </ZHHeaderScrollView>
+        )
+    }
+
     rowPressed(rowID) {
 
     }
 
     render() {
         var isLoadingFlagView = (!this.state.isLoading) ?
-            ( <ListView style={{flex: 1}}
-                dataSource={this.state.listDataSource}
-                renderRow={this.renderRow.bind(this)}/>) :
+            (
+                <ListView
+                          dataSource={this.state.listDataSource}
+                          renderRow={this.renderRow.bind(this)}
+                          renderHeader={this.renderHeader.bind(this)}
+                />
+            )
+            :
             ( <ActivityIndicatorIOS style={{flex:1, justifyContent:'center', alignItems:'center'}}
                                     hidden='true' size='large'/>);
         return (
-            <View style={{flex:1 ,justifyContent:'center', alignItems:'center'}}>
+            <View style={{width: Dimensions.get('window').width ,flex:1 ,justifyContent:'center', alignItems:'center'}}>
                 {isLoadingFlagView}
             </View>
         );
