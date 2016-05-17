@@ -16,11 +16,12 @@ import {
     View,
     ActivityIndicatorIOS,
     TouchableHighlight,
+    TouchableOpacity,
     StyleSheet,
     Image,
     NavigatorIOS,
     Navigator,
-    Navibar
+    Navibar,
 } from 'react-native';
 
 var styles = StyleSheet.create({});
@@ -45,11 +46,31 @@ export default class ZHHomePage extends React.Component {
 
 
     _renderScene(router, navigator) {
+        var Component = router.component;
+
+        var defaultNaviColor = router.passProps.naviBarColor ? router.passProps.naviBarColor : '#ffffff';
+        var ScrollChangeColor = router.isScrollChangeColor ? this.state.navigatorColor : defaultNaviColor;
+
+        var backButton;
+        if (router.showBackButton) {
+            backButton = (
+                <TouchableOpacity onPress={navigator.pop} style={{width:80, height:40, position: 'absolute', left: 10,
+                top: 25}}>
+                    <Text style={{paddingLeft: 10, fontSize:14, fontWeight:'bold', color: '#ffffff'}}>{'返回'}</Text>
+                </TouchableOpacity>
+            );
+        }
         return (
-            <View style={{position: 'absolute', height: Dimensions.get('window').height ,width: Dimensions.get('window').width}}>
-                <HomePageInit style={{}} navigator={navigator} {...router.passProps} />
-                <View style={{ height: 64, backgroundColor:this.state.navigatorColor, justifyContent:'center'}}>
-                    <Text style={{alignSelf:'center', fontSize:16, color:'#ffffff', fontWeight:'bold'}}>{'今日热闻'}</Text>
+            <View
+                style={{position: 'absolute', height: Dimensions.get('window').height ,width: Dimensions.get('window').width}}>
+                <Component style={{}} navigator={navigator} {...router.passProps} />
+                <View
+                    style={{ height: 64, backgroundColor:ScrollChangeColor, justifyContent:'center', flexDirection:'row'}}>
+                    {backButton}
+                    <View style={{alignSelf:'center'}}>
+                        <Text
+                            style={{alignSelf:'center', fontSize:16, color:'#ffffff', fontWeight:'bold'}}>{router.title}</Text>
+                    </View>
                 </View>
             </View>
         );
@@ -59,22 +80,27 @@ export default class ZHHomePage extends React.Component {
     render() {
 
         return (
-
             <Navigator
-
                 initialRoute={{
-                    name:'HomePage',
-                    title:'Zhihu',
+                    component:HomePageInit,
+                    showBackButton: false,
+                    isScrollChangeColor:true,
+                    title:'今日热闻',
                     passProps: {
                     updateColor: this._updateColor.bind(this),
-                    demo:'123'
+                    demo:'123',
+                    naviBarColor:navigatorOriginColor,
             }
             }}
+                configureScene={(route, routeStack) => Navigator.SceneConfigs.PushFromRight}
                 renderScene={this._renderScene.bind(this)}
             />
         );
     }
 }
+
+
+//============================================
 
 export default class HomePageInit extends React.Component {
     // 构造
@@ -121,12 +147,11 @@ export default class HomePageInit extends React.Component {
                 isLoading: false
             });
         }
-        console.log('11');
     }
 
     renderRow(rowData, sectionID, rowID) {
         return (
-            <TouchableHighlight underlayColor='#dddddd' onPress={() => this.rowPressed(rowID)}>
+            <TouchableHighlight underlayColor='#dddddd' onPress={() => this.rowPressed(rowData)}>
                 <View
                     style={{width: Dimensions.get('window').width ,flexDirection:'row' ,height:90, backgroundColor:'#ffffff', borderBottomColor:'#d3d3d3', borderBottomWidth:0.3}}>
                     <Text style={{fontSize: 16, flex: 3, paddingLeft: 10, paddingTop: 10}}>
@@ -154,25 +179,25 @@ export default class HomePageInit extends React.Component {
         )
     }
 
-    rowPressed(rowID) {
-        return (
-            <NavigatorIOS
-                initialRoute={{
-                component: ZHDetailPage,
-                title: 'Detail Page',
-                passProps: {
-                    pageID: '123'
-                }
-                }}
-            />
-        )
+    rowPressed(rowData) {
+        this.props.navigator.push({
+            component: ZHDetailPage,
+            showBackButton: true,
+
+            title: '',
+            passProps: {
+                rowID: rowData.id,
+                naviBarColor :'#00000000'
+            }
+        })
     }
-    handleScroll(event: Object) {
+
+    handleScroll(event:Object) {
         var sxt = event.nativeEvent.contentOffset.y;
         var alpha = ('0' + parseInt((sxt / 300) * 255).toString(16)).slice(-2);
-        if((sxt / 300) >= 1) alpha = 'ff';
-        if((sxt / 300) <= 0) alpha = '00';
-        var color = navigatorOriginColor + alpha;
+        if ((sxt / 300) >= 1) alpha = 'ff';
+        if ((sxt / 300) <= 0) alpha = '00';
+        var color = this.props.naviBarColor + alpha;
         //console.log(color);
         this.props.updateColor(color);
     }
