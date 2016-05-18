@@ -31,7 +31,7 @@ export default class ZHHomePage extends React.Component {
     // 构造
     constructor(props) {
         super(props);
-        // 初始状态
+        // 初始状
         this.state = {
             navigatorColor: navigatorOriginColor + '00'
         };
