@@ -7,7 +7,8 @@ import{
     ScrollView,
     View,
     Image,
-    Text
+    Text,
+    TouchableHighlight
 
 } from 'react-native';
 
@@ -27,15 +28,24 @@ export default class ZHHeaderScollView extends React.Component {
         return this.state.height;
     }
 
+    _onHeaderImageOnPressed(item) {
+        this.props.headerScrollPressed(item);
+    }
+
     _createItemHeaderView(item, i) {
         return (
-            <Image key={i}
-                   style={{width: Dimensions.get('window').width, height: this.state.height}}
-                source={{uri: item.image}}>
-                <View style={{flex: 1, backgroundColor: '#00000030', justifyContent:'flex-end'}}>
-                    <Text style={{fontSize: 20, backgroundColor:'#00000000', color:'#ffffff', alignSelf:'center', marginLeft: 15, marginRight:15, paddingBottom: 30}}>{item.title}</Text>
+            <TouchableHighlight key={i} onPress={() => this._onHeaderImageOnPressed(item)}>
+                <View style={{flex: 1}}>
+                    <Image
+                           style={{width: Dimensions.get('window').width, height: this.state.height}}
+                           source={{uri: item.image}}>
+                        <View style={{flex: 1, backgroundColor: '#00000030', justifyContent:'flex-end'}}>
+                            <Text
+                                style={{fontSize: 20, backgroundColor:'#00000000', color:'#ffffff', alignSelf:'center', marginLeft: 15, marginRight:15, paddingBottom: 30}}>{item.title}</Text>
+                        </View>
+                    </Image>
                 </View>
-            </Image>
+            </TouchableHighlight>
 
         )
     }
@@ -46,12 +56,12 @@ export default class ZHHeaderScollView extends React.Component {
         );
         return (
             //<View style={{flex: 1}}>
-                <ScrollView pagingEnabled={true}
-                            horizontal={true}
-                            showsHorizontalScrollIndicator={false}
-                            style={{width: Dimensions.get('window').width, flex: 1}}>
-                        {imageListView}
-                </ScrollView>
+            <ScrollView pagingEnabled={true}
+                        horizontal={true}
+                        showsHorizontalScrollIndicator={false}
+                        style={{width: Dimensions.get('window').width, flex: 1}}>
+                {imageListView}
+            </ScrollView>
             //</View>
         )
     }

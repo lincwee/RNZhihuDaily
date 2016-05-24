@@ -194,6 +194,7 @@ export default class HomePageInit extends React.Component {
                 ref='MyHeaderScrollView'
                 width={300}
                 height={200}
+                headerScrollPressed={this.rowPressed.bind(this)}
                 imageDataSource={this.state.listTopStoriesSource}>
             </ZHHeaderScrollView>
         )
