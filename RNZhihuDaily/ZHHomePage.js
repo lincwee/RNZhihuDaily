@@ -22,10 +22,16 @@ import {
     NavigatorIOS,
     Navigator,
     Navibar,
+    RefreshControl
 } from 'react-native';
 
 var styles = StyleSheet.create({});
 var navigatorOriginColor = '#2fc1fd'
+
+var latestURL = 'http://news-at.zhihu.com/api/4/news/latest';
+var refreshStartOffset = -10;
+var navibarChangeColorOffset = 300;
+var navibarTitleChangeColorOffset = 30;
 
 export default class ZHHomePage extends React.Component {
     // 构造
@@ -34,6 +40,7 @@ export default class ZHHomePage extends React.Component {
         // 初始状
         this.state = {
             navigatorColor: navigatorOriginColor + '00',
+            navibarTitleColor: '#ffffff',
             listViewMetrics: ''
         };
     }
@@ -43,6 +50,10 @@ export default class ZHHomePage extends React.Component {
         this.setState({
             navigatorColor: color
         });
+    }
+
+    _updateNavibarTitle(color) {
+        this.setState({navibarTitleColor: color});
     }
 
 
@@ -70,7 +81,8 @@ export default class ZHHomePage extends React.Component {
                     {backButton}
                     <View style={{alignSelf:'center'}}>
                         <Text
-                            style={{alignSelf:'center', fontSize:16, color:'#ffffff', fontWeight:'bold'}}>{router.title}</Text>
+                            style={{alignSelf:'center', fontSize:16, color:this.state.navibarTitleColor, fontWeight:'bold'}}>{router.title}
+                        </Text>
                     </View>
                 </View>
             </View>
@@ -89,6 +101,7 @@ export default class ZHHomePage extends React.Component {
                     title:'今日热闻',
                     passProps: {
                     updateColor: this._updateColor.bind(this),
+                    updateNavibarTitle: this._updateNavibarTitle.bind(this),
                     demo:'123',
                     naviBarColor:navigatorOriginColor,
             }
@@ -127,6 +140,7 @@ export default class HomePageInit extends React.Component {
             listData: [],
             listTopStoriesSource: [],
             isLoading: true,
+            isRefreshing: false,
             navigator: this.props.navigator,
         };
 
@@ -134,7 +148,7 @@ export default class HomePageInit extends React.Component {
     }
 
     componentDidMount() {
-        this._executeQuery("http://news-at.zhihu.com/api/4/news/latest");
+        this._executeQuery(latestURL);
     }
 
     _executeQuery(query) {
@@ -173,7 +187,8 @@ export default class HomePageInit extends React.Component {
             <TouchableHighlight underlayColor='#dddddd' onPress={() => this.rowPressed(rowData)}>
                 <View
                     style={{width: Dimensions.get('window').width ,flexDirection:'row' ,height:90, backgroundColor:'#ffffff', borderBottomColor:'#d3d3d3', borderBottomWidth:0.3}}>
-                    <Text style={{fontSize: 14, flex: 3, paddingLeft: 10, paddingTop: 10}}>
+                    <Text
+                        style={{fontSize: 15, fontWeight:'bold', lineHeight: 20, flex: 3, paddingLeft: 10, paddingTop: 10}}>
                         {rowData.title}
                     </Text>
                     <View style={{flex: 1, justifyContent:'center'}}>
@@ -201,9 +216,10 @@ export default class HomePageInit extends React.Component {
     }
 
     renderSectionHeader(sectionData, keyTitle) {
-        return(
+        return (
             <View style={{backgroundColor: navigatorOriginColor, flex: 1, height: 30, justifyContent: 'center'}}>
-                <Text style={{color: '#ffffff', fontWeight: 'bold', textAlign: 'center', alignSelf:'center'}}>{this.state.listData[keyTitle].date}</Text>
+                <Text
+                    style={{color: '#ffffff', fontWeight: 'bold', textAlign: 'center', alignSelf:'center'}}>{this.state.listData[keyTitle].date}</Text>
             </View>
         )
     }
@@ -223,35 +239,43 @@ export default class HomePageInit extends React.Component {
 
     handleScroll(event:Object) {
         var sxt = event.nativeEvent.contentOffset.y;
-        //navibar color change
+        //update navibar color
         var alpha = '';
-        if (sxt >= 0 && sxt <= 300) {
-            alpha = ('0' + parseInt((sxt / 300) * 255).toString(16)).slice(-2);
-            if ((sxt / 300) >= 1) alpha = 'ff';
-            if ((sxt / 300) <= 0) alpha = '00';
+        if (sxt >= 0 && sxt <= navibarChangeColorOffset) {
+            alpha = ('0' + parseInt((sxt / navibarChangeColorOffset) * 255).toString(16)).slice(-2);
+            if ((sxt / navibarChangeColorOffset) >= 1) alpha = 'ff';
+            if ((sxt / navibarChangeColorOffset) <= 0) alpha = '00';
             var color = this.props.naviBarColor + alpha;
             this.props.updateColor(color);
         }
-        else if(sxt > 300) {
-            if(alpha != 'ff') {
+        else if (sxt > navibarChangeColorOffset) {
+            if (alpha != 'ff') {
                 alpha = 'ff'
                 var color = this.props.naviBarColor + alpha;
-                //console.log(color);
                 this.props.updateColor(color);
             }
         }
         else if (sxt < 0) {
-            if(alpha != '00') {
+            if (alpha != '00') {
                 alpha = '00'
                 var color = this.props.naviBarColor + alpha;
-                //console.log(color);
                 this.props.updateColor(color);
             }
         }
 
+        //update navibar title color
+        if(sxt < refreshStartOffset) {
+            var titleAlpha = ('0' + parseInt((1 + sxt / navibarTitleChangeColorOffset) * 255).toString(16)).slice(-2);
+            if(-sxt >= navibarTitleChangeColorOffset) titleAlpha = '00';
+            this.props.updateNavibarTitle('#ffffff' + titleAlpha);
+        }
+        else {
+            this.props.updateNavibarTitle('#ffffff');
+        }
+
         var scrollProperties = this.refs.MyListView.getMetrics();
 
-        //这才是scroll判断的高度
+        //this is scrollview contentSize.height
         var scrollViewHeight = scrollProperties.contentLength - this.listViewHeight;
         if (sxt >= scrollViewHeight + 40 && !this.isLoadingMore) {
             console.log('can load more!');
@@ -261,6 +285,38 @@ export default class HomePageInit extends React.Component {
         }
     }
 
+    //Refresh function
+    onRefreshList() {
+        this._refresh(latestURL);
+        //this.props.updateNavibarTitle('#ffffff00');
+    }
+
+    _refresh(url) {
+        console.log(url);
+        this.setState({isRefreshing: true});
+        fetch(url)
+            .then(response => response.json())
+            .then(json => {
+                this._handleRefreshData(json);
+            })
+            .catch(error => {
+                console.log('error loadMore request!');
+            });
+    }
+
+    _handleRefreshData(data) {
+        this.mapData[0] = data.stories;
+        var listdata = this.state.listData;
+        listdata[0] = data;
+        this.setState({
+            listData: listdata,
+            isRefreshing: false,
+            listDataSource: this.state.listDataSource.cloneWithRowsAndSections(this.mapData)
+        })
+        this.props.updateNavibarTitle('#ffffff');
+    }
+
+    //load more
     _loadMore(url) {
         console.log(url);
         fetch(url)
@@ -279,19 +335,19 @@ export default class HomePageInit extends React.Component {
             var listData = this.state.listData;
             //listData = listData.concat(data.stories);
 
-            this.flag ++;
+            this.flag++;
             this.mapData[this.flag] = data.stories;
             this.latestLoadMoreDate = data.date;
             //this.mapData.reverse();
             this.setState({
-                listData:listData.concat(data),
+                listData: listData.concat(data),
                 listDataSource: this.state.listDataSource.cloneWithRowsAndSections(this.mapData),
             })
         }
     }
 
     _getYesturDayDate(todayDate) {
-        if(todayDate.length != 8) {
+        if (todayDate.length != 8) {
             //如果不是8位.则不符合要求
             return '';
         }
@@ -299,11 +355,11 @@ export default class HomePageInit extends React.Component {
         var month = todayDate.substring(4, 6);
         var day = todayDate.substring(6, 8);
 
-        var todayFormatDate = year+'-'+ month +'-' + day;
+        var todayFormatDate = year + '-' + month + '-' + day;
         var resultDate = new Date(todayFormatDate);
         resultDate.setDate(resultDate.getDate() - 1);
 
-        var resultStrDate = resultDate.getFullYear().toString()+ '' + ('0' + (resultDate.getMonth() + 1)).toString().slice(-2) + '' + ('0' + resultDate.getDate()).toString().slice(-2);
+        var resultStrDate = resultDate.getFullYear().toString() + '' + ('0' + (resultDate.getMonth() + 1)).toString().slice(-2) + '' + ('0' + resultDate.getDate()).toString().slice(-2);
         return resultStrDate;
     }
 
@@ -320,7 +376,15 @@ export default class HomePageInit extends React.Component {
                     onLayout={event => {
                     this.listViewHeight = event.nativeEvent.layout.height}
                     }
-                />
+                    refreshControl={
+                    <RefreshControl
+                        refreshing={this.state.isRefreshing}
+                        onRefresh={this.onRefreshList.bind(this)}
+                    />
+                    }>
+                    <View
+                        style={{backgroundColor:'#ff00ff', height: 60, width: 70, paddingBottom: 0, paddingLeft: 100, flex: 1}}></View>
+                </ListView>
             )
             :
             ( <ActivityIndicatorIOS style={{flex:1, justifyContent:'center', alignItems:'center'}}
