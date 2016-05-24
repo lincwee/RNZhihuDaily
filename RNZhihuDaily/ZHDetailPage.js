@@ -15,7 +15,8 @@ import {
     StyleSheet,
     Image,
     WebView,
-    ScrollView
+    ScrollView,
+    InteractionManager
 } from 'react-native';
 
 var styles = StyleSheet.create({
@@ -25,11 +26,11 @@ var styles = StyleSheet.create({
     },
     headerTitle: {
         fontSize: 20,
-        backgroundColor:'#00000000',
-        color:'#ffffff',
-        alignSelf:'center',
+        backgroundColor: '#00000000',
+        color: '#ffffff',
+        alignSelf: 'center',
         marginLeft: 15,
-        marginRight:15,
+        marginRight: 15,
         paddingBottom: 30
     },
 });
@@ -86,11 +87,14 @@ export default class ZHDetailPage extends Component {
                 </View>
             )
             :
-            ( <ActivityIndicatorIOS style={{flex:1, justifyContent:'center', alignItems:'center'}}
-                                    hidden='true' size='large'/>);
+            (
+                <ActivityIndicatorIOS
+                    style={{flex:1, paddingTop: Dimensions.get('window').width / 2 ,alignItems:'center'}}
+                    hidden='true' size='large'/>
+            );
         return (
             <ScrollView
-                style={{top: 0, left: 0, position: 'absolute', height: Dimensions.get('window').height ,width: Dimensions.get('window').width}}
+                style={{top: 0, left: 0, backgroundColor:'#ffffff', position: 'absolute', height: Dimensions.get('window').height ,width: Dimensions.get('window').width}}
                 automaticallyAdjustContentInsets={false}
                 onScroll={this._onScroll.bind(this)}
             >
@@ -102,9 +106,9 @@ export default class ZHDetailPage extends Component {
     _onScroll(event) {
         var sxt = event.nativeEvent.contentOffset.y;
         var radio = this.state.imgRatio;
-        if(sxt < 400) {
+        if (sxt < 400) {
             this.setState({
-                imgheight:200 + sxt / 300 * 100
+                imgheight: 200 + sxt / 300 * 100
             });
         }
     }
@@ -112,6 +116,8 @@ export default class ZHDetailPage extends Component {
     componentDidMount() {
         var url = "http://news-at.zhihu.com/api/4/news/" + this.state.id;
         this._executeQuery(url);
+        InteractionManager.runAfterInteractions(() => {
+        });
 
     }
 
@@ -133,17 +139,21 @@ export default class ZHDetailPage extends Component {
 
     _handleResponse(response) {
         if (response) {
-            this.setState({
-                newsDetail: response,
-                isLoading: false
-            });
-            Image.getSize(response.image, (width, height) => {
+            InteractionManager.runAfterInteractions(() => {
                 this.setState({
-                    imgRatio: height / width,
-                    //imgHeight: height / width * Dimensions.get('window').width
-                    imgHeight: 200
+                    newsDetail: response,
+                    isLoading: false
+                });
+                Image.getSize(response.image, (width, height) => {
+                    this.setState({
+                        imgRatio: height / width,
+                        //imgHeight: height / width * Dimensions.get('window').width
+                        imgHeight: 200
+                    });
                 });
             });
+
+
         }
     }
 

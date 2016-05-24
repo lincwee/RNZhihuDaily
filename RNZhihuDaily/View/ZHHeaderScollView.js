@@ -23,6 +23,10 @@ export default class ZHHeaderScollView extends React.Component {
         };
     }
 
+    getHeaderScrollViewHeight() {
+        return this.state.height;
+    }
+
     _createItemHeaderView(item, i) {
         return (
             <Image key={i}
