@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a6424828-dc91-4c74-9b41-ca932ad5926a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RNZhihuDaily/ios/RNZhihuDaily.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/RNZhihuDaily/ios/RNZhihuDaily.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RNZhihuDaily/ios/RNZhihuDaily/AppDelegate.m" afterPath="$PROJECT_DIR$/RNZhihuDaily/ios/RNZhihuDaily/AppDelegate.m" />
     </list>
     <ignored path="RNZhihuDaily.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,12 +28,12 @@
       <file leaf-file-name="ZHHomePage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.5135136">
-              <caret line="272" column="53" selection-start-line="272" selection-start-column="53" selection-end-line="272" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.4054054">
+              <caret line="100" column="44" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
               <folding>
-                <marker date="1464084609000" expanded="true" signature="11995:12386" placeholder="..." />
-                <marker date="1464084609000" expanded="false" signature="12996:13005" placeholder="..." />
-                <marker date="1464084609000" expanded="false" signature="13161:13167" placeholder="..." />
+                <marker date="1464145745000" expanded="true" signature="12062:12453" placeholder="..." />
+                <marker date="1464145745000" expanded="false" signature="13063:13072" placeholder="..." />
+                <marker date="1464145745000" expanded="false" signature="13228:13234" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -314,12 +316,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.5135136">
-          <caret line="272" column="53" selection-start-line="272" selection-start-column="53" selection-end-line="272" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.4054054">
+          <caret line="100" column="44" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
           <folding>
-            <marker date="1464084609000" expanded="true" signature="11995:12386" placeholder="..." />
-            <marker date="1464084609000" expanded="false" signature="12996:13005" placeholder="..." />
-            <marker date="1464084609000" expanded="false" signature="13161:13167" placeholder="..." />
+            <marker date="1464145745000" expanded="true" signature="12062:12453" placeholder="..." />
+            <marker date="1464145745000" expanded="false" signature="13063:13072" placeholder="..." />
+            <marker date="1464145745000" expanded="false" signature="13228:13234" placeholder="..." />
           </folding>
         </state>
       </provider>
