@@ -72,6 +72,16 @@ export default class ZHHomePage extends React.Component {
                 </TouchableOpacity>
             );
         }
+
+        var rightButton;
+        if (router.showRighButton) {
+            rightButton = (
+                <TouchableOpacity onPress={router.onRightBottonClicked}
+                                  style={{width: 80, height: 40, position: 'absolute', right: Dimensions.get('window').width - 10, top: 25}}>
+                    <Text style={{paddingLeft: 10, fontSize:14, fontWeight:'bold', color: '#ffffff'}}>{router.rightButtonTitle}</Text>
+                </TouchableOpacity>
+            )
+        }
         return (
             <View
                 style={{position: 'absolute', height: Dimensions.get('window').height ,width: Dimensions.get('window').width}}>
@@ -79,6 +89,7 @@ export default class ZHHomePage extends React.Component {
                 <View
                     style={{ height: 64, backgroundColor:ScrollChangeColor, justifyContent:'center', flexDirection:'row'}}>
                     {backButton}
+                    {rightButton}
                     <View style={{alignSelf:'center'}}>
                         <Text
                             style={{alignSelf:'center', fontSize:16, color:this.state.navibarTitleColor, fontWeight:'bold'}}>{router.title}
@@ -97,6 +108,9 @@ export default class ZHHomePage extends React.Component {
                 initialRoute={{
                     component:HomePageInit,
                     showBackButton: false,
+                    showRighButton: false,
+                    rightButtonTitle:'',
+                    onRightBottonClicked:'',
                     isScrollChangeColor:true,
                     title:'今日热闻',
                     passProps: {
@@ -228,6 +242,8 @@ export default class HomePageInit extends React.Component {
         this.props.navigator.push({
             component: ZHDetailPage,
             showBackButton: true,
+            showRighButton: true,
+            rightButtonTitle: '输入',
 
             title: '',
             passProps: {
@@ -277,7 +293,7 @@ export default class HomePageInit extends React.Component {
 
         //this is scrollview contentSize.height
         var scrollViewHeight = scrollProperties.contentLength - this.listViewHeight;
-        if (sxt >= scrollViewHeight + 40 && !this.isLoadingMore) {
+        if (sxt >= scrollViewHeight - 20 && !this.isLoadingMore) {
             console.log('can load more!');
             this.isLoadingMore = true;
 
