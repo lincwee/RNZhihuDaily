@@ -23,15 +23,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ZHHomePage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ZHHomePage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86052996">
-              <caret line="309" column="18" selection-start-line="309" selection-start-column="18" selection-end-line="309" selection-end-column="18" />
+            <state vertical-scroll-proportion="-11.851851">
+              <caret line="410" column="72" selection-start-line="410" selection-start-column="72" selection-end-line="410" selection-end-column="72" />
               <folding>
-                <marker date="1464155397000" expanded="true" signature="12728:13119" placeholder="..." />
-                <marker date="1464155397000" expanded="false" signature="13729:13738" placeholder="..." />
+                <marker date="1464166113000" expanded="true" signature="13152:13543" placeholder="..." />
+                <marker date="1464166113000" expanded="false" signature="14153:14162" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZHDetailPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHDetailPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.6666665">
+              <caret line="134" column="27" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="27" />
+              <folding>
+                <marker date="1464167261000" expanded="true" signature="1135:1321" placeholder="..." />
+                <marker date="1464167261000" expanded="true" signature="1141:1251" placeholder="..." />
+                <marker date="1464167261000" expanded="true" signature="1257:1314" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextInputPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ForTest/TextInputPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReactNativeART.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/ART/ReactNativeART.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.39609483">
+              <caret line="477" column="26" selection-start-line="477" selection-start-column="26" selection-end-line="477" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -40,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/RNZhihuDaily/View/ZHHeaderScollView.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -90,6 +124,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/RNZhihuDaily" />
   </component>
@@ -98,6 +139,8 @@
       <list>
         <option value="$PROJECT_DIR$/RNZhihuDaily/View/ZHHeaderScollView.js" />
         <option value="$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js" />
+        <option value="$PROJECT_DIR$/RNZhihuDaily/ZHDetailPage.js" />
+        <option value="$PROJECT_DIR$/RNZhihuDaily/ForTest/TextInputPage.js" />
       </list>
     </option>
   </component>
@@ -173,7 +216,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
+              <option name="myItemId" value="ForTest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -186,9 +229,50 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v5.0.0/bin/node" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
       <method />
     </configuration>
   </component>
@@ -266,8 +350,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1464155397000" expanded="true" signature="12728:13119" placeholder="..." />
-            <marker date="1464155397000" expanded="false" signature="13729:13738" placeholder="..." />
+            <marker date="1464166113000" expanded="true" signature="13152:13543" placeholder="..." />
+            <marker date="1464166113000" expanded="false" signature="14153:14162" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -357,21 +441,49 @@
     <entry file="file://$PROJECT_DIR$/RNZhihuDaily/View/ZHHeaderScollView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHDetailPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6666665">
+          <caret line="134" column="27" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="27" />
+          <folding>
+            <marker date="1464167261000" expanded="true" signature="1135:1321" placeholder="..." />
+            <marker date="1464167261000" expanded="true" signature="1141:1251" placeholder="..." />
+            <marker date="1464167261000" expanded="true" signature="1257:1314" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86052996">
-          <caret line="309" column="18" selection-start-line="309" selection-start-column="18" selection-end-line="309" selection-end-column="18" />
+        <state vertical-scroll-proportion="-11.851851">
+          <caret line="410" column="72" selection-start-line="410" selection-start-column="72" selection-end-line="410" selection-end-column="72" />
           <folding>
-            <marker date="1464155397000" expanded="true" signature="12728:13119" placeholder="..." />
-            <marker date="1464155397000" expanded="false" signature="13729:13738" placeholder="..." />
+            <marker date="1464166113000" expanded="true" signature="13152:13543" placeholder="..." />
+            <marker date="1464166113000" expanded="false" signature="14153:14162" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ForTest/TextInputPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/ART/ReactNativeART.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39609483">
+          <caret line="477" column="26" selection-start-line="477" selection-start-column="26" selection-end-line="477" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

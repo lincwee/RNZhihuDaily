@@ -1,6 +1,8 @@
 /**
  * Created by lincwee on 16/5/13.
  */
+'use strict';
+
 import React from 'react';
 import Dimensions from 'Dimensions';
 import WebContainer from 'react-native-html-webview';
@@ -35,7 +37,7 @@ var styles = StyleSheet.create({
     },
 });
 
-export default class ZHDetailPage extends Component {
+export default class ZHDetailPage extends React.Component {
     // 构造
     constructor(props) {
         super(props);
@@ -151,6 +153,7 @@ export default class ZHDetailPage extends Component {
                         imgHeight: 200
                     });
                 });
+                Image.prefetch(response.image);
             });
 
 

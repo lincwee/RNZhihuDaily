@@ -6,6 +6,7 @@
 import React from 'react';
 import ZHHeaderScrollView from './View/ZHHeaderScollView';
 import ZHDetailPage from './ZHDetailPage';
+import TextInputPage from './ForTest/TextInputPage';
 import ZHDynamicNavigator from './View/ZHDynamicNavigator'
 import Dimensions from 'Dimensions';
 import {
@@ -63,38 +64,41 @@ export default class ZHHomePage extends React.Component {
         var defaultNaviColor = router.passProps.naviBarColor ? router.passProps.naviBarColor : '#ffffff';
         var ScrollChangeColor = router.isScrollChangeColor ? this.state.navigatorColor : defaultNaviColor;
 
-        var backButton;
-        if (router.showBackButton) {
-            backButton = (
-                <TouchableOpacity onPress={navigator.pop} style={{width:80, height:40, position: 'absolute', left: 10,
-                top: 25}}>
-                    <Text style={{paddingLeft: 10, fontSize:14, fontWeight:'bold', color: '#ffffff'}}>{'返回'}</Text>
-                </TouchableOpacity>
-            );
-        }
+        var backButton = router.showBackButton ? (
+            <TouchableOpacity onPress={navigator.pop}
+                              style={{flex: 1, alignSelf:'center'}}>
+                <Text style={{paddingLeft: 10, fontSize:14, fontWeight:'bold', color: '#ffffff'}}>{'返回'}</Text>
+            </TouchableOpacity>
+        ) : (
+            <View style={{flex: 1}}>
 
-        var rightButton;
-        if (router.showRighButton) {
-            rightButton = (
-                <TouchableOpacity onPress={router.onRightBottonClicked}
-                                  style={{width: 80, height: 40, position: 'absolute', right: Dimensions.get('window').width - 10, top: 25}}>
-                    <Text style={{paddingLeft: 10, fontSize:14, fontWeight:'bold', color: '#ffffff'}}>{router.rightButtonTitle}</Text>
-                </TouchableOpacity>
-            )
-        }
+            </View>
+        );
+
+        var rightButton = router.showRighButton ? (
+            <TouchableOpacity onPress={router.onRightBottonClicked}
+                              style={{flex: 1, alignSelf:'center'}}>
+                <Text
+                    style={{paddingLeft: 10, fontSize:14, fontWeight:'bold', color: '#ffffff'}}>{router.rightButtonTitle}</Text>
+            </TouchableOpacity>
+        ) : (
+            <View style={{flex: 1}}>
+
+            </View>
+        )
         return (
             <View
                 style={{position: 'absolute', height: Dimensions.get('window').height ,width: Dimensions.get('window').width}}>
                 <Component style={{}} navigator={navigator} {...router.passProps} />
                 <View
-                    style={{ height: 64, backgroundColor:ScrollChangeColor, justifyContent:'center', flexDirection:'row'}}>
+                    style={{ height: 64, width: Dimensions.get('window').width, backgroundColor:ScrollChangeColor, justifyContent:'center', flexDirection:'row'}}>
                     {backButton}
-                    {rightButton}
-                    <View style={{alignSelf:'center'}}>
+                    <View style={{alignSelf:'center', flex: 6}}>
                         <Text
                             style={{alignSelf:'center', fontSize:16, color:this.state.navibarTitleColor, fontWeight:'bold'}}>{router.title}
                         </Text>
                     </View>
+                    {rightButton}
                 </View>
             </View>
         );
@@ -243,12 +247,26 @@ export default class HomePageInit extends React.Component {
             component: ZHDetailPage,
             showBackButton: true,
             showRighButton: true,
-            rightButtonTitle: '输入',
+            onRightBottonClicked: this._onTextInputClicked.bind(this),
+            rightButtonTitle: '文本输入',
 
             title: '',
             passProps: {
                 rowID: rowData.id,
                 naviBarColor: '#00000000'
+            }
+        })
+    }
+
+    _onTextInputClicked() {
+        console.log('text input view!!');
+
+        this.props.navigator.push({
+            component: TextInputPage,
+            showBackButton: true,
+            title: '文本输入',
+            passProps: {
+                naviBarColor: '#654321'
             }
         })
     }
@@ -280,9 +298,9 @@ export default class HomePageInit extends React.Component {
         }
 
         //update navibar title color
-        if(sxt < refreshStartOffset) {
+        if (sxt < refreshStartOffset) {
             var titleAlpha = ('0' + parseInt((1 + sxt / navibarTitleChangeColorOffset) * 255).toString(16)).slice(-2);
-            if(-sxt >= navibarTitleChangeColorOffset) titleAlpha = '00';
+            if (-sxt >= navibarTitleChangeColorOffset) titleAlpha = '00';
             this.props.updateNavibarTitle('#ffffff' + titleAlpha);
         }
         else {
