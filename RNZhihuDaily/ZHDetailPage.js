@@ -154,13 +154,6 @@ export default class ZHDetailPage extends React.Component {
                     newsDetail: response,
                     isLoading: false
                 });
-                //Image.getSize(response.image, (width, height) => {
-                //    this.setState({
-                //        imgRatio: height / width,
-                //        //imgHeight: height / width * Dimensions.get('window').width
-                //        imgHeight: 200
-                //    });
-                //});
                 Image.prefetch(response.image);
             });
 

@@ -26,7 +26,7 @@
       <file leaf-file-name="ZHHomePage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-10.0">
               <caret line="117" column="44" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
               <folding>
                 <marker date="1464247751000" expanded="true" signature="13152:13543" placeholder="..." />
@@ -39,12 +39,12 @@
       <file leaf-file-name="ZHDetailPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHDetailPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6913043">
-              <caret line="160" column="40" selection-start-line="160" selection-start-column="40" selection-end-line="160" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="116" column="39" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="39" />
               <folding>
-                <marker date="1464257584000" expanded="true" signature="1345:1531" placeholder="..." />
-                <marker date="1464257584000" expanded="true" signature="1351:1461" placeholder="..." />
-                <marker date="1464257584000" expanded="true" signature="1467:1524" placeholder="..." />
+                <marker date="1464258332000" expanded="true" signature="1345:1531" placeholder="..." />
+                <marker date="1464258332000" expanded="true" signature="1351:1461" placeholder="..." />
+                <marker date="1464258332000" expanded="true" signature="1467:1524" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -511,17 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="117" column="44" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
-          <folding>
-            <marker date="1464247751000" expanded="true" signature="13152:13543" placeholder="..." />
-            <marker date="1464247751000" expanded="false" signature="14153:14162" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/WebView/WebView.ios.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.962963">
@@ -551,14 +540,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="117" column="44" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
+          <folding>
+            <marker date="1464247751000" expanded="true" signature="13152:13543" placeholder="..." />
+            <marker date="1464247751000" expanded="false" signature="14153:14162" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHDetailPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6913043">
-          <caret line="160" column="40" selection-start-line="160" selection-start-column="40" selection-end-line="160" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="116" column="39" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="39" />
           <folding>
-            <marker date="1464257584000" expanded="true" signature="1345:1531" placeholder="..." />
-            <marker date="1464257584000" expanded="true" signature="1351:1461" placeholder="..." />
-            <marker date="1464257584000" expanded="true" signature="1467:1524" placeholder="..." />
+            <marker date="1464258332000" expanded="true" signature="1345:1531" placeholder="..." />
+            <marker date="1464258332000" expanded="true" signature="1351:1461" placeholder="..." />
+            <marker date="1464258332000" expanded="true" signature="1467:1524" placeholder="..." />
           </folding>
         </state>
       </provider>
