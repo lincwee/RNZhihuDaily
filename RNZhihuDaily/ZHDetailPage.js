@@ -48,7 +48,9 @@ export default class ZHDetailPage extends React.Component {
             newsDetail: '',
             isLoading: true,
             id: this.props.rowID,
-            imgRatio: 1,
+            imgRatio: 0.8,
+            //imgHeight: height / width * Dimensions.get('window').width
+            imgHeight: 200
         };
     }
 
@@ -152,13 +154,13 @@ export default class ZHDetailPage extends React.Component {
                     newsDetail: response,
                     isLoading: false
                 });
-                Image.getSize(response.image, (width, height) => {
-                    this.setState({
-                        imgRatio: height / width,
-                        //imgHeight: height / width * Dimensions.get('window').width
-                        imgHeight: 200
-                    });
-                });
+                //Image.getSize(response.image, (width, height) => {
+                //    this.setState({
+                //        imgRatio: height / width,
+                //        //imgHeight: height / width * Dimensions.get('window').width
+                //        imgHeight: 200
+                //    });
+                //});
                 Image.prefetch(response.image);
             });
 

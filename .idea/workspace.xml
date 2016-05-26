@@ -39,12 +39,12 @@
       <file leaf-file-name="ZHDetailPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHDetailPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16736402">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6913043">
+              <caret line="160" column="40" selection-start-line="160" selection-start-column="40" selection-end-line="160" selection-end-column="40" />
               <folding>
-                <marker date="1464250437000" expanded="true" signature="1243:1429" placeholder="..." />
-                <marker date="1464250437000" expanded="true" signature="1249:1359" placeholder="..." />
-                <marker date="1464250437000" expanded="true" signature="1365:1422" placeholder="..." />
+                <marker date="1464257584000" expanded="true" signature="1345:1531" placeholder="..." />
+                <marker date="1464257584000" expanded="true" signature="1351:1461" placeholder="..." />
+                <marker date="1464257584000" expanded="true" signature="1467:1524" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -202,16 +202,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="RNZhihuDaily" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RNZhihuDaily" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RNZhihuDaily" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -532,14 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-191.11111">
-          <caret line="344" column="45" selection-start-line="344" selection-start-column="45" selection-end-line="344" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/WebView/WebView.ios.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.962963">
@@ -561,14 +543,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-191.11111">
+          <caret line="344" column="45" selection-start-line="344" selection-start-column="45" selection-end-line="344" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHDetailPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16736402">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6913043">
+          <caret line="160" column="40" selection-start-line="160" selection-start-column="40" selection-end-line="160" selection-end-column="40" />
           <folding>
-            <marker date="1464250437000" expanded="true" signature="1243:1429" placeholder="..." />
-            <marker date="1464250437000" expanded="true" signature="1249:1359" placeholder="..." />
-            <marker date="1464250437000" expanded="true" signature="1365:1422" placeholder="..." />
+            <marker date="1464257584000" expanded="true" signature="1345:1531" placeholder="..." />
+            <marker date="1464257584000" expanded="true" signature="1351:1461" placeholder="..." />
+            <marker date="1464257584000" expanded="true" signature="1467:1524" placeholder="..." />
           </folding>
         </state>
       </provider>
