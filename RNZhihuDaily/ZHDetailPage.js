@@ -5,7 +5,8 @@
 
 import React from 'react';
 import Dimensions from 'Dimensions';
-import WebContainer from 'react-native-html-webview';
+import WebViewAutoHeight from './View/WebViewAutoHeight'
+//import WebContainer from 'react-native-html-webview';
 import {
     Component,
     AppRegistry,
@@ -24,6 +25,7 @@ import {
 var styles = StyleSheet.create({
     WebViewStyle: {
         //flex: 1,
+        height: Dimensions.get('window').height,
         width: Dimensions.get('window').width,
     },
     headerTitle: {
@@ -77,13 +79,14 @@ export default class ZHDetailPage extends React.Component {
             );
         }
 
+
         var isLoadingFlagView = (!this.state.isLoading) ?
             (
                 <View style={{backgroundColor:'#ffffff', flex: 1}}>
-                    <WebContainer style={styles.WebViewStyle}
-                                  makeSafe={false}
-                                  autoHeight={true}
-                                  html={html}
+                    <WebViewAutoHeight style={styles.WebViewStyle}
+                                       ref='webView'
+                                       scrollEnabled={false}
+                                       source={{html:html}}
                     />
                     {headerView}
                 </View>
@@ -94,6 +97,7 @@ export default class ZHDetailPage extends React.Component {
                     style={{flex:1, paddingTop: Dimensions.get('window').width / 2 ,alignItems:'center'}}
                     hidden='true' size='large'/>
             );
+        this.refs.webView;
         return (
             <ScrollView
                 style={{top: 0, left: 0, backgroundColor:'#ffffff', position: 'absolute', height: Dimensions.get('window').height ,width: Dimensions.get('window').width}}
@@ -105,9 +109,11 @@ export default class ZHDetailPage extends React.Component {
         );
     }
 
+
     _onScroll(event) {
         var sxt = event.nativeEvent.contentOffset.y;
         var radio = this.state.imgRatio;
+        console.log(sxt);
         if (sxt < 400) {
             this.setState({
                 imgheight: 200 + sxt / 300 * 100
