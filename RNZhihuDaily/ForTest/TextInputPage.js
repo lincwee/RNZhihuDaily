@@ -24,10 +24,16 @@ export default class TextInputPage extends React.Component {
         };
     }
 
+    _otherContainerTouched() {
+        this.refs.textInput.blur();
+
+    }
+
     render() {
 
         return (
             <View
+                onStartShouldSetResponder={this._otherContainerTouched.bind(this)}
                 style={{top: 0, left: 0, justifyContent:'center', alignItems:'center', backgroundColor:'#ffffff', position: 'absolute', height: Dimensions.get('window').height ,width: Dimensions.get('window').width}}>
                 <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
                     <Text
@@ -42,6 +48,7 @@ export default class TextInputPage extends React.Component {
                 </View>
                 <View style={{flex: 1, marginTop:20, alignItems:'center'}}>
                     <TextInput
+                        ref='textInput'
                         style={{height:40, width: 250, borderColor: 'gray', borderWidth: 1}}
                         onChangeText={(text) => this.setState({text})}
                         value={this.state.text}

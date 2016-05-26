@@ -54,17 +54,27 @@
         <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ForTest/TextInputPage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+              <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReactNativeART.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TextInput.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/TextInput/TextInput.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5869565">
+              <caret line="594" column="4" selection-start-line="594" selection-start-column="4" selection-end-line="594" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReactNativeART.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/ART/ReactNativeART.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39609483">
-              <caret line="477" column="26" selection-start-line="477" selection-start-column="26" selection-end-line="477" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="482" column="5" selection-start-line="482" selection-start-column="5" selection-end-line="482" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -471,18 +481,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ForTest/TextInputPage.js">
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/ART/ReactNativeART.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <caret line="482" column="5" selection-start-line="482" selection-start-column="5" selection-end-line="482" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/ART/ReactNativeART.js">
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ForTest/TextInputPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39609483">
-          <caret line="477" column="26" selection-start-line="477" selection-start-column="26" selection-end-line="477" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/TextInput/TextInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5869565">
+          <caret line="594" column="4" selection-start-line="594" selection-start-column="4" selection-end-line="594" selection-end-column="4" />
           <folding />
         </state>
       </provider>
