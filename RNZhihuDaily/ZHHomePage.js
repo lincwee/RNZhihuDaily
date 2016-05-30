@@ -246,9 +246,9 @@ export default class HomePageInit extends React.Component {
         this.props.navigator.push({
             component: ZHDetailPage,
             showBackButton: true,
-            showRighButton: true,
-            onRightBottonClicked: this._onTextInputClicked.bind(this),
-            rightButtonTitle: '文本输入',
+            //showRighButton: true,
+            //onRightBottonClicked: this._onTextInputClicked.bind(this),
+            //rightButtonTitle: '文本输入',
 
             title: '',
             passProps: {
