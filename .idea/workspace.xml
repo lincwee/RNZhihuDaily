@@ -14,10 +14,12 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RNZhihuDaily/ZHDetailPage.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RNZhihuDaily/index.android.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RNZhihuDaily/index.ios.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RNZhihuDaily/ios/RNZhihuDaily/NativeControl/ZHDetailBottomTabBar.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RNZhihuDaily/ios/RNZhihuDaily/NativeControl/ZHDetailBottomTabBar.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RNZhihuDaily/ios/RNZhihuDaily/NativeControlManager/ZHDetailBottomTabbarManager.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RNZhihuDaily/ios/RNZhihuDaily/NativeControlManager/ZHDetailBottomTabbarManager.m" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RNZhihuDaily/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js" afterPath="$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RNZhihuDaily/ios/RNZhihuDaily.xcodeproj/xcshareddata/xcschemes/RNZhihuDaily.xcscheme" afterPath="$PROJECT_DIR$/RNZhihuDaily/ios/RNZhihuDaily.xcodeproj/xcshareddata/xcschemes/RNZhihuDaily.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RNZhihuDaily/ios/RNZhihuDaily/AppDelegate.m" afterPath="$PROJECT_DIR$/RNZhihuDaily/ios/RNZhihuDaily/AppDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RNZhihuDaily.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,8 +53,52 @@
       <file leaf-file-name="ZHDetailPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHDetailPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37552157">
-              <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.50209206">
+              <caret line="109" column="17" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="17" />
+              <folding>
+                <marker date="1464678454000" expanded="true" signature="1400:1586" placeholder="..." />
+                <marker date="1464678454000" expanded="true" signature="1406:1516" placeholder="..." />
+                <marker date="1464678454000" expanded="true" signature="1522:1579" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RCTMapManager.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/React/Views/RCTMapManager.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="130" column="33" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RCTSwitchManager.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/React/Views/RCTSwitchManager.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RCTImageViewManager.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Image/RCTImageViewManager.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/View/View.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="143" column="22" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -88,53 +134,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextInputPage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ForTest/TextInputPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TextInput.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/TextInput/TextInput.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="586" column="8" selection-start-line="586" selection-start-column="8" selection-end-line="586" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReactNativeART.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/ART/ReactNativeART.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="482" column="5" selection-start-line="482" selection-start-column="5" selection-end-line="482" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZHHeaderScollView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RNZhihuDaily/View/ZHHeaderScollView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/CustomComponents/ListView/ListView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="462" column="17" selection-start-line="462" selection-start-column="16" selection-end-line="462" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -199,6 +203,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -259,8 +265,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,7 +358,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19277108" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -393,18 +397,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js">
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/View/View.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="117" column="44" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHDetailPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="143" column="22" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -437,7 +433,148 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/TextInput/TextInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="586" column="8" selection-start-line="586" selection-start-column="8" selection-end-line="586" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="44" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHDetailPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="59" selection-start-line="92" selection-start-column="59" selection-end-line="92" selection-end-column="59" />
+          <folding>
+            <marker date="1464678454000" expanded="true" signature="1400:1586" placeholder="..." />
+            <marker date="1464678454000" expanded="true" signature="1406:1516" placeholder="..." />
+            <marker date="1464678454000" expanded="true" signature="1522:1579" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/React/Views/RCTMapManager.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Image/RCTImageViewManager.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/View/View.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="143" column="22" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/View/WebViewAutoHeight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="23" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="344" column="45" selection-start-line="344" selection-start-column="45" selection-end-line="344" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/WebView/WebView.ios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ForTest/TextInputPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/TextInput/TextInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="586" column="8" selection-start-line="586" selection-start-column="8" selection-end-line="586" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="44" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHDetailPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1464678454000" expanded="true" signature="1400:1586" placeholder="..." />
+            <marker date="1464678454000" expanded="true" signature="1406:1516" placeholder="..." />
+            <marker date="1464678454000" expanded="true" signature="1522:1579" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/View/WebViewAutoHeight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="23" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="344" column="45" selection-start-line="344" selection-start-column="45" selection-end-line="344" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/WebView/WebView.ios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ForTest/TextInputPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -453,7 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="482" column="5" selection-start-line="482" selection-start-column="5" selection-end-line="482" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -461,9 +597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -471,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="462" column="17" selection-start-line="462" selection-start-column="16" selection-end-line="462" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -487,9 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -511,7 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="462" column="17" selection-start-line="462" selection-start-column="16" selection-end-line="462" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -554,7 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="462" column="17" selection-start-line="462" selection-start-column="16" selection-end-line="462" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -562,9 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -572,7 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="482" column="5" selection-start-line="482" selection-start-column="5" selection-end-line="482" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -580,22 +703,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/MapView/MapView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33379695">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/React/Views/RCTMapManager.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="130" column="33" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/TextInput/TextInput.js">
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/React/Views/RCTSwitchManager.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="586" column="8" selection-start-line="586" selection-start-column="8" selection-end-line="586" selection-end-column="8" />
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/WebView/WebView.ios.js">
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Image/RCTImageViewManager.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/View/View.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="143" column="22" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -616,6 +761,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/WebView/WebView.ios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNZhihuDaily/node_modules/react-native/Libraries/Components/TextInput/TextInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="586" column="8" selection-start-line="586" selection-start-column="8" selection-end-line="586" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHHomePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -626,9 +787,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RNZhihuDaily/ZHDetailPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37552157">
-          <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="24" />
-          <folding />
+        <state vertical-scroll-proportion="0.50209206">
+          <caret line="109" column="17" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="17" />
+          <folding>
+            <marker date="1464678454000" expanded="true" signature="1400:1586" placeholder="..." />
+            <marker date="1464678454000" expanded="true" signature="1406:1516" placeholder="..." />
+            <marker date="1464678454000" expanded="true" signature="1522:1579" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

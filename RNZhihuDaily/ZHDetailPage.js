@@ -6,6 +6,7 @@
 import React from 'react';
 import Dimensions from 'Dimensions';
 import WebViewAutoHeight from './View/WebViewAutoHeight'
+import { requireNativeComponent } from 'react-native';
 //import WebContainer from 'react-native-html-webview';
 import {
     Component,
@@ -82,6 +83,7 @@ export default class ZHDetailPage extends React.Component {
         }
 
 
+        var ZHDetailBottomTabBar =  requireNativeComponent('ZHDetailBottomTabbar', null);
         var isLoadingFlagView = (!this.state.isLoading) ?
             (
                 <View style={{backgroundColor:'#ffffff', flex: 1}}>
@@ -99,15 +101,23 @@ export default class ZHDetailPage extends React.Component {
                     style={{flex:1, paddingTop: Dimensions.get('window').width / 2 ,alignItems:'center'}}
                     hidden='true' size='large'/>
             );
-        this.refs.webView;
         return (
-            <ScrollView
-                style={{top: 0, left: 0, backgroundColor:'#ffffff', position: 'absolute', height: Dimensions.get('window').height ,width: Dimensions.get('window').width}}
-                automaticallyAdjustContentInsets={false}
-                onScroll={this._onScroll.bind(this)}
-            >
-                {isLoadingFlagView}
-            </ScrollView>
+            <View>
+                <ScrollView
+                    style={{top: 0, left: 0, backgroundColor:'#ffffff', position: 'absolute', height: Dimensions.get('window').height - 40 ,width: Dimensions.get('window').width}}
+                    automaticallyAdjustContentInsets={false}
+                    onScroll={this._onScroll.bind(this)}
+                >
+                    {isLoadingFlagView}
+                </ScrollView>
+                <ZHDetailBottomTabBar
+                    itemsNum={5}
+                    tabBarWidth={Dimensions.get('window').width}
+                    style={{height: 44,width: Dimensions.get('window').width, borderTopWidth:1, borderTopColor:'#000000', backgroundColor:'#ffffff',position: 'absolute', top: Dimensions.get('window').height - 40, left: 0}}>
+
+                </ZHDetailBottomTabBar>
+
+            </View>
         );
     }
 
