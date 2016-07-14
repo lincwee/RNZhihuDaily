@@ -19,7 +19,8 @@ import {
     Image,
     WebView,
     ScrollView,
-    InteractionManager
+    InteractionManager,
+    Animated
 } from 'react-native';
 
 var styles = StyleSheet.create({
@@ -50,7 +51,8 @@ export default class ZHDetailPage extends React.Component {
             id: this.props.rowID,
             imgRatio: 0.8,
             //imgHeight: height / width * Dimensions.get('window').width
-            imgHeight: 200
+            imgHeight: 200,
+            imgTop: 0,
         };
     }
 
@@ -65,19 +67,19 @@ export default class ZHDetailPage extends React.Component {
         var headerView;
         if (!this.state.isLoading) {
             headerView = (
-                <Image
+                <Animated.Image
                     style={{resizeMode:'cover',
                 width: Dimensions.get('window').width,
-                height: this.state.imgHeight,
                 position:'absolute',
-                top: 0,
+                height: this.state.imgHeight,
+                top: this.state.imgTop,
                 left: 0
             }}
                     source={{uri: this.state.newsDetail.image}}>
                     <View style={{flex: 1, backgroundColor: '#00000030', justifyContent:'flex-end'}}>
                         <Text style={styles.headerTitle}>{this.state.newsDetail.title}</Text>
                     </View>
-                </Image>
+                </Animated.Image>
             );
         }
 
@@ -90,7 +92,7 @@ export default class ZHDetailPage extends React.Component {
                                        scrollEnabled={false}
                                        source={{html:html}}
                     />
-                    {headerView}
+
                 </View>
             )
             :
@@ -101,13 +103,17 @@ export default class ZHDetailPage extends React.Component {
             );
         this.refs.webView;
         return (
-            <ScrollView
-                style={{top: 0, left: 0, backgroundColor:'#ffffff', position: 'absolute', height: Dimensions.get('window').height ,width: Dimensions.get('window').width}}
-                automaticallyAdjustContentInsets={false}
-                onScroll={this._onScroll.bind(this)}
-            >
-                {isLoadingFlagView}
-            </ScrollView>
+            <View style={{flex: 1}}>
+                <ScrollView
+                    style={{top: 0, left: 0, backgroundColor:'#ffffff', position: 'absolute', height: Dimensions.get('window').height ,width: Dimensions.get('window').width}}
+                    scrollEventThrottle={20}
+                    automaticallyAdjustContentInsets={false}
+                    onScroll={this._onScroll.bind(this)}
+                >
+                    {isLoadingFlagView}
+                </ScrollView>
+                {headerView}
+            </View>
         );
     }
 
@@ -116,10 +122,29 @@ export default class ZHDetailPage extends React.Component {
         var sxt = event.nativeEvent.contentOffset.y;
         var radio = this.state.imgRatio;
         console.log(sxt);
-        if (sxt < 400) {
+        if(sxt <= 200 && sxt >= 0) {
             this.setState({
-                imgheight: 200 + sxt / 300 * 100
-            });
+                imgTop: -sxt
+            })
+        }
+        else if(sxt < 0) {
+            if(sxt < 0 && sxt > -200) {
+                this.setState({
+                    imgTop: 0,
+                    imgHeight:200 - sxt
+                })
+            }
+            else {
+                this.setState({
+                    imgHeight:400,
+                    imgTop: 0
+                })
+            }
+        }
+        else {
+            this.setState({
+                imgTop: -200
+            })
         }
     }
 
